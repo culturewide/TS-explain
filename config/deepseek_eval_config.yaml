@@ -1,0 +1,49 @@
+{
+  "project": {
+    "name": "TS-Explain",
+    "seed": 42,
+    "language": "zh",
+    "assets_dir": "../ts-explain-assets",
+    "kb_dir": "data/kb"
+  },
+  "embedding": {
+    "provider": "local_hashing",
+    "model": "text-embedding-3-small",
+    "bge_model": "BAAI/bge-large-zh-v1.5",
+    "dimension": 384,
+    "openai_api_key_env": "OPENAI_API_KEY"
+  },
+  "vector_store": {
+    "backend": "auto",
+    "collection": "ts_explain_kb",
+    "persist_dir": "data/kb/chroma",
+    "local_dir": "data/kb/local_index"
+  },
+  "retrieval": {
+    "top_k": 8,
+    "vector_weight": 0.60,
+    "bm25_weight": 0.35,
+    "rerank_weight": 0.05,
+    "reranker": "local_overlap",
+    "citation_prefix": "S"
+  },
+  "llm": {
+    "default_provider": "deepseek",
+    "qwen": {
+      "model": "qwen-plus",
+      "api_key_env": "DASHSCOPE_API_KEY"
+    },
+    "deepseek": {
+      "model": "deepseek-chat",
+      "base_url": "https://api.deepseek.com/v1/chat/completions",
+      "api_key_env": "DEEPSEEK_API_KEY"
+    },
+    "temperature": 0.2,
+    "max_tokens": 1800
+  },
+  "evaluation": {
+    "support_threshold": 0.18,
+    "question_bank": "experiments/question_bank.yaml",
+    "results_dir": "experiments/results_deepseek"
+  }
+}

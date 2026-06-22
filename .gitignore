@@ -1,0 +1,51 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments and local env files
+.venv/
+venv/
+env/
+.env
+*.env
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases, checkpoints, and generated indexes
+*.sqlite
+*.sqlite3
+*.db
+data/kb/
+
+# Large or generated time-series/model artifacts
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+*.bin
+ts-explain-assets/
+
+# Experiment and agent runtime outputs
+experiments/agent_runs/
+experiments/checkpoints/
+experiments/results/
+experiments/results_*/
+
+# Generated presentation/build artifacts
+outputs/
+*.inspect.ndjson
+
+# Temporary local smoke-test folders
+.tmp*/
+tmp/

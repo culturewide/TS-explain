@@ -1,0 +1,10 @@
+{
+  "modes": ["no_rag", "rag_only", "rag_ts"],
+  "provider": "offline",
+  "top_k": 8,
+  "random_seed": 42,
+  "question_bank": "experiments/question_bank.yaml",
+  "output_dir": "experiments/results",
+  "notes": "Use provider=qwen or provider=deepseek after setting API keys for full LLM ablation."
+}
+

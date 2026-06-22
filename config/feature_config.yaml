@@ -1,0 +1,28 @@
+{
+  "trend": {
+    "kendall_strong_threshold": 0.45,
+    "kendall_moderate_threshold": 0.20,
+    "stl_period": null
+  },
+  "periodicity": {
+    "max_lag": 80,
+    "acf_threshold": 0.35,
+    "fft_power_ratio_threshold": 0.18
+  },
+  "anomaly": {
+    "score_quantile": 0.95,
+    "cluster_gap": 3
+  },
+  "correlation": {
+    "top_pairs": 6,
+    "change_threshold": 0.35
+  },
+  "residual": {
+    "amplification_z": 2.0
+  },
+  "changepoint": {
+    "max_points": 5,
+    "penalty": 3.0
+  }
+}
+

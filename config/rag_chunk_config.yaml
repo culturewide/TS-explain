@@ -1,0 +1,33 @@
+{
+  "paper": {
+    "strategy": "paragraph",
+    "max_chars": 1200,
+    "overlap_chars": 160,
+    "min_chars": 100
+  },
+  "experiment_result": {
+    "strategy": "row",
+    "max_chars": 900,
+    "overlap_chars": 0,
+    "min_chars": 20
+  },
+  "dataset_meta": {
+    "strategy": "row",
+    "max_chars": 700,
+    "overlap_chars": 0,
+    "min_chars": 20
+  },
+  "hyperparameter": {
+    "strategy": "record",
+    "max_chars": 900,
+    "overlap_chars": 80,
+    "min_chars": 20
+  },
+  "architecture": {
+    "strategy": "code_summary",
+    "max_chars": 1300,
+    "overlap_chars": 120,
+    "min_chars": 80
+  }
+}
+
